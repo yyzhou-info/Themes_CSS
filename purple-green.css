@@ -1,0 +1,52 @@
+@import "./purple.css";
+:root {
+    --title-color: #000000; /*原来是#444444*/
+    --link-color: #2aa899;
+    --code-color: #2aa899;
+    --border-quote: var(--border-quote-grey);
+    --header-weight: bold;
+}
+
+
+/*22-07-13 以下部分我想学pie主题，三级标题旁边添加小圆点，四级标题也有变化。*/
+/* --- 三级标题左边的小圆点 --- */
+h3::before {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  margin-bottom: 0.18em;
+  line-height: 1.43;
+  vertical-align: middle;
+  content: '';
+  background-color: #2aa899;
+  border-radius: 50%;
+}
+
+/* 三级四级标题点击后左边的提示图标 */
+#write > h3.md-focus::before,
+#write > h4.md-focus::before {
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  background-color: #2aa899;
+}
+
+h4 {
+  margin-top: 1.4em;
+  font-size: 1.2em;
+}
+
+/* --- 四级标题左边的小短线 --- */
+h4::before {
+  display: inline-block;
+  width: 6px;
+  height: 2px;
+  margin-right: 8px;
+  margin-bottom: 0.18em;
+  vertical-align: middle;
+  content: '';
+  background-color: #2aa899;
+}
+
+/*22-07-13 结束*/
